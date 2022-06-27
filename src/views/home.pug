@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title Menu
+    link(rel="stylesheet" href="/css/index.css")
+  body
+    header 
+      h1 My Incredible Idiom App
+    main
+      each phrase in phrases 
+        div(class="idiom-wrapper" id=phrase.id)
+          p(class="idiom")= phrase.idiom
+    script(src="/js/index.js")
+    section(class="modal" id="add-meaning")
+      p(class="modal-idiom")
+      p(class="modal-meaning")
