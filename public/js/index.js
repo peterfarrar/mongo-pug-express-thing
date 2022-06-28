@@ -1,7 +1,6 @@
 getthemodal = (event) => {
   const id = event.currentTarget.parentNode.id
   const data = { id }
-  console.log('click event on', id) 
 
   fetch('/meaning', {
     method: 'POST',
@@ -12,7 +11,6 @@ getthemodal = (event) => {
   })
   .then(response => response.json())
   .then(data => {
-    console.log('Success:', data);
     const { meaning, idiom } = data
     const idiomParagraph = document.querySelector('.modal-idiom')
     const meaningParagraph = document.querySelector('.modal-meaning')
