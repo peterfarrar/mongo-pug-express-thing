@@ -4,9 +4,7 @@ getthemodal = (event) => {
   console.log('click event on', id) 
 
   fetch('/meaning', {
-
     method: 'POST',
-
     headers: {
       'Content-Type': 'application/json; charset=utf-8',
     },
