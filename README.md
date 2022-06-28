@@ -20,13 +20,13 @@ export MONGODB_URL=mongodb://localhost:27017/my-mongo-test
 ```
 These values should match your environment.  For example, my MongoDB is running locally.  If yours is running remotely you will need a different value for `MONGODB_URL`
 
-If you look in the `package.json` file you'll see that this file is being envoked before th eapp is run.
+If you look in the `package.json` file you'll see that this file is being envoked before the app is run.
 
 ### Seed the database
-This app relies on a mongo database populated with idioms and their meanings.  Run `node config/seed.js` to set it up.  I know, you're wondering, "Where did you get these amazing idioms?"  I found them [here!](https://www.ef.edu/english-resources/english-idioms/)  Hopefully the creator of that page doesn't feel I stole them.  I promise I'm not making a penny of this.  There are plenty more there if you're facinated with idioms and proverbs.
+This app relies on a mongo database populated with idioms and their meanings.  Run `npm run seed` to set it up.  I know, you're wondering, "Where did you get these amazing idioms?"  I found them [here!](https://www.ef.edu/english-resources/english-idioms/)  Hopefully the creator of that page doesn't feel I stole them.  I promise I'm not making a penny off this.  There are plenty more there if you're facinated with idioms and proverbs.
 
 ### Run the app
-To run the app there are two options, development using nodemon, or just start using node:
+To run the app there are two options, 'development' using nodemon, or just 'start' using node:
 * `npm run dev`
 * `npm run start`
 
