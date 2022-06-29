@@ -1,10 +1,10 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
-const { port, corsOptions, sessionSecret } = require('../options')
+const { port, corsOptions } = require('../options')
 const routes = require('./routes/index')
 const path = require('node:path')
-let {mongoose} = require('./lib/mongoose')
+require('./lib/mongoose') // initialize mongo connection
 
 const app = express()
 app.set('views', './src/views')
@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, '../public')))
 
-app.get('/ping', (req, res) => {
+app.get('/ping', (_req, res) => {
   res.send("pong")
 })
 

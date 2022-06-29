@@ -1,4 +1,4 @@
-const {mongoose} = require('../src/lib/mongoose');
+const { mongoose } = require('../src/lib/mongoose');
 const { Phrase } = require('../src/models/phrases')
 
 const phrases = [
